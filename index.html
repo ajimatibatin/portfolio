@@ -3,92 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Batin Ajimati Portfolio</title>
+<title>Batin Portfolio</title>
 
 <style>
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f4f4f4;
+    background: #f5f5f5;
+    color: #333;
 }
 
-header{
-    background:#1b4332;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+/* HERO */
+.hero {
+    background: #1f8b4c;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
 }
 
-section{
-    padding:40px 20px;
-    max-width:900px;
-    margin:auto;
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
 }
 
-.card{
-    background:white;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.hero p {
+    font-size: 18px;
 }
 
-footer{
-    background:#1b4332;
-    color:white;
-    text-align:center;
-    padding:20px;
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ABOUT */
+.about {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* PROJECT */
+.project {
+    background: white;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* back-to-top icon */
+.top-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* CONNECT */
+.connect {
+    text-align: center;
+}
+
+.connect a {
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.circle {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    margin-right: 5px;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-    <h1>Batin Ajimati</h1>
-    <p>Agricultural Economist | Data Analyst | Researcher</p>
-</header>
+<!-- HERO -->
+<div class="hero" id="top">
+    <h1>Hi, I’m Batin</h1>
+    <p>I build websites</p>
+</div>
 
+<!-- ABOUT -->
 <section>
-    <div class="card">
+    <div class="about">
         <h2>About Me</h2>
-        <p>
-        I am passionate about agricultural development,
-        food security research, irrigation economics and
-        data analysis.
-        </p>
+        <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
     </div>
 
-    <div class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>Stata</li>
-            <li>Microsoft Excel</li>
-            <li>Research Writing</li>
-            <li>Data Analysis</li>
-            <li>Statistical Modelling</li>
-        </ul>
+    <h2 style="margin-top:40px;">Development</h2>
+    <div class="skills">
+        <div class="skill">Clean, efficient code</div>
+        <div class="skill">Beautiful interfaces</div>
+        <div class="skill">Fast & responsive</div>
     </div>
 
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>Effect of Irrigation Use on Food Security</li>
-            <li>Binary Logit Analysis of Irrigation Adoption</li>
-            <li>HDDS Analysis</li>
-            <li>Socioeconomic Analysis of Rice Farmers</li>
-        </ul>
+    <h2 style="margin-top:40px;">Projects</h2>
+
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>Mobile App Interface</h3>
+        <p>Mobile-first design with smooth navigation.</p>
     </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ajimatibatin@gmail.com">ajimatibatin@gmail.com</a>
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio showcasing design and development work.</p>
+    </div>
+
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>E-Commerce Platform</h3>
+        <p>Modern online store with product management and checkout.</p>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="connect" style="margin-top:60px;">
+        <h2>Let’s Connect</h2>
+
+        <a href="mailto:ajimatibatin@gmail.com">📧</a>
+        <a href="https://x.com/">𝕏</a>
+        <a href="https://github.com/">🐙</a>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Batin Ajimati</p>
+    <p><span class="circle">C</span> 2026 Batin. All rights reserved</p>
 </footer>
 
 </body>
