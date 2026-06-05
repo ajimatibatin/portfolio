@@ -1,3 +1,5 @@
+PASTE THE ENTIRE RESPONSIVE VERSION BELOW INTO index.html AND REPLACE EVERYTHING THAT IS CURRENTLY THERE.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@ body {
     color: #333;
 }
 
-/* HERO */
+/* HERO /
 .hero {
     background: #1f8b4c;
     color: white;
@@ -30,29 +32,40 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 42px;
     margin: 0;
 }
 
 .hero p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 18px;
 }
 
-/* SECTIONS */
+/ SECTION /
 section {
-    width: min(90%, 900px);
+    padding: 60px 20px;
+    max-width: 950px;
     margin: auto;
-    padding: 60px 0;
 }
 
-/* ABOUT */
-.about {
+/ CARDS /
+.card {
     background: white;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
-/* SKILLS */
+/ ICON BOX (yellow) /
+.icon-box {
+    display: inline-block;
+    background: #ffd84d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/ SKILLS GRID /
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -66,46 +79,60 @@ section {
     text-align: center;
 }
 
-/* PROJECT */
+/ PROJECT SECTION /
+.project-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.project-sub {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/ PROJECT CARD /
 .project {
     background: white;
     padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-    position: relative;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
-.project:hover {
-    transform: translateY(-5px);
+/ IMAGE ICON /
+.project-img {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-/* back-to-top icon */
-.top-icon {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    text-decoration: none;
-    font-size: 18px;
+/ TECH TAGS /
+.tags {
+    margin-top: 10px;
 }
 
-/* CONNECT */
+.tag {
+    display: inline-block;
+    background: #1f8b4c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/ CONNECT /
 .connect {
     text-align: center;
+    margin-top: 60px;
 }
 
 .connect a {
-    margin: 0 12px;
-    font-size: 24px;
+    font-size: 22px;
+    margin: 0 10px;
     text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
-.connect a:hover {
-    transform: scale(1.2);
-}
-
-/* FOOTER */
+/ FOOTER /
 footer {
     background: #111;
     color: white;
@@ -122,27 +149,47 @@ footer {
     margin-right: 5px;
 }
 
-/* RESPONSIVE DESIGN */
+/ RESPONSIVE DESIGN */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
 
     .hero {
         padding: 70px 20px;
     }
 
+    .hero h1 {
+        font-size: 34px;
+    }
+
     .hero p {
         font-size: 16px;
     }
 
-    .skills {
-        grid-template-columns: 1fr;
+    section {
+        padding: 40px 15px;
     }
 
+    .card,
     .project {
-        padding: 16px;
+        padding: 18px;
     }
 
-    .top-icon {
-        font-size: 16px;
+    .project-title {
+        font-size: 28px;
+    }
+
+    .project-img {
+        font-size: 36px;
+    }
+
+    .connect a {
+        font-size: 20px;
+        margin: 0 8px;
     }
 
     footer {
@@ -156,83 +203,130 @@ footer {
         padding: 60px 15px;
     }
 
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
     section {
-        width: 92%;
+        padding: 30px 12px;
     }
 
-    .about {
-        padding: 20px;
-    }
-
-    .skill {
-        padding: 15px;
-    }
-
+    .card,
     .project {
         padding: 15px;
     }
 
+    .project-title {
+        font-size: 24px;
+    }
+
+    .project-img {
+        font-size: 32px;
+    }
+
+    .icon-box {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .tag {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
     .connect a {
-        font-size: 22px;
-        margin: 0 8px;
+        font-size: 18px;
+        margin: 0 6px;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero" id="top">
+<div class="hero">
     <h1>Hi, I’m Batin</h1>
     <p>I build websites</p>
 </div>
 
-<!-- ABOUT -->
 <section>
-    <div class="about">
-        <h2>About Me</h2>
-        <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
-    </div>
 
-    <h2 style="margin-top:40px;">Development</h2>
-    <div class="skills">
-        <div class="skill">Clean, efficient code</div>
-        <div class="skill">Beautiful interfaces</div>
-        <div class="skill">Fast & responsive</div>
-    </div>
+<div class="card">
+    <h2>About Me</h2>
+    <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
+</div>
 
-    <h2 style="margin-top:40px;">Projects</h2>
+<div class="card">
+    <div class="icon-box">< ></div>
+    <h2>Development</h2>
+    <p>Clean, efficient code</p>
+</div>
 
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>Mobile App Interface</h3>
-        <p>Mobile-first design with smooth navigation.</p>
-    </div>
+<div class="card">
+    <div class="icon-box">🎨</div>
+    <h2>Design</h2>
+    <p>Beautiful interfaces</p>
+</div>
 
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio showcasing design and development work.</p>
-    </div>
+<div class="card">
+    <div class="icon-box">⚡</div>
+    <h2>Performance</h2>
+    <p>Rapid & immediate</p>
+</div>
 
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>E-Commerce Platform</h3>
-        <p>Modern online store with product management and checkout.</p>
-    </div>
+<div class="project-title">Projects</div>
+<p class="project-sub">Here are some of my amazing works.</p>
 
-    <!-- CONNECT -->
-    <div class="connect" style="margin-top:60px;">
-        <h2>Let’s Connect</h2>
-        <a href="mailto:ajimatibatin@gmail.com">📧</a>
-        <a href="https://x.com/">𝕏</a>
-        <a href="https://github.com/">🐙</a>
+<div class="project">
+    <div class="project-img">📱</div>
+    <h3>Mobile App Interface</h3>
+    <p>Mobile-first design with smooth navigation.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
     </div>
+</div>
+
+<div class="project">
+    <div class="project-img">💻</div>
+    <h3>Portfolio Website</h3>
+    <p>Personal portfolio showcasing design and development work.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </div>
+</div>
+
+<div class="project">
+    <div class="project-img">🛒</div>
+    <h3>E-Commerce Platform</h3>
+    <p>Modern online store with product management and checkout.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </div>
+</div>
+
+<div class="connect">
+    <h2>Let’s Connect</h2>
+    <a href="mailto:ajimatibatin@gmail.com">📧</a>
+    <a href="https://x.com/">𝕏</a>
+    <a href="https://github.com/">🐙</a>
+</div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p><span class="circle">C</span> 2026 Batin. All rights reserved</p>
 </footer>
