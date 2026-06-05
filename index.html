@@ -34,21 +34,32 @@ body {
     font-size: 18px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     padding: 60px 20px;
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
 }
 
-/* ABOUT */
-.about {
+/* CARDS */
+.card {
     background: white;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
-/* SKILLS */
+/* ICON BOX (yellow) */
+.icon-box {
+    display: inline-block;
+    background: #ffd84d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* SKILLS GRID */
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -62,32 +73,56 @@ section {
     text-align: center;
 }
 
-/* PROJECT */
+/* PROJECT SECTION */
+.project-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.project-sub {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* PROJECT CARD */
 .project {
     background: white;
     padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-    position: relative;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
-/* back-to-top icon */
-.top-icon {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    text-decoration: none;
-    font-size: 18px;
+/* IMAGE ICON */
+.project-img {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* TECH TAGS */
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #1f8b4c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-right: 5px;
 }
 
 /* CONNECT */
 .connect {
     text-align: center;
+    margin-top: 60px;
 }
 
 .connect a {
+    font-size: 22px;
     margin: 0 10px;
-    font-size: 20px;
     text-decoration: none;
 }
 
@@ -108,59 +143,93 @@ footer {
     margin-right: 5px;
 }
 </style>
-
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero" id="top">
+<div class="hero">
     <h1>Hi, I’m Batin</h1>
     <p>I build websites</p>
 </div>
 
-<!-- ABOUT -->
 <section>
-    <div class="about">
-        <h2>About Me</h2>
-        <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
+
+<!-- ABOUT -->
+<div class="card">
+    <h2>About Me</h2>
+    <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
+</div>
+
+<!-- DEVELOPMENT -->
+<div class="card">
+    <div class="icon-box">&lt; &gt;</div>
+    <h2>Development</h2>
+    <p>Clean, efficient code</p>
+</div>
+
+<!-- DESIGN -->
+<div class="card">
+    <div class="icon-box">🎨</div>
+    <h2>Design</h2>
+    <p>Beautiful interfaces</p>
+</div>
+
+<!-- PERFORMANCE -->
+<div class="card">
+    <div class="icon-box">⚡</div>
+    <h2>Performance</h2>
+    <p>Rapid & immediate</p>
+</div>
+
+<!-- PROJECTS -->
+<div class="project-title">Projects</div>
+<p class="project-sub">Here are some of my amazing works.</p>
+
+<!-- PROJECT 1 -->
+<div class="project">
+    <div class="project-img">📱</div>
+    <h3>Mobile App Interface</h3>
+    <p>Mobile-first design with smooth navigation.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
     </div>
+</div>
 
-    <h2 style="margin-top:40px;">Development</h2>
-    <div class="skills">
-        <div class="skill">Clean, efficient code</div>
-        <div class="skill">Beautiful interfaces</div>
-        <div class="skill">Fast & responsive</div>
+<!-- PROJECT 2 -->
+<div class="project">
+    <div class="project-img">💻</div>
+    <h3>Portfolio Website</h3>
+    <p>Personal portfolio showcasing design and development work.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
     </div>
+</div>
 
-    <h2 style="margin-top:40px;">Projects</h2>
-
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>Mobile App Interface</h3>
-        <p>Mobile-first design with smooth navigation.</p>
+<!-- PROJECT 3 -->
+<div class="project">
+    <div class="project-img">🛒</div>
+    <h3>E-Commerce Platform</h3>
+    <p>Modern online store with product management and checkout.</p>
+    <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
     </div>
+</div>
 
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio showcasing design and development work.</p>
-    </div>
+<!-- CONNECT -->
+<div class="connect">
+    <h2>Let’s Connect</h2>
+    <a href="mailto:ajimatibatin@gmail.com">📧</a>
+    <a href="https://x.com/">𝕏</a>
+    <a href="https://github.com/">🐙</a>
+</div>
 
-    <div class="project">
-        <a class="top-icon" href="#top">⬆</a>
-        <h3>E-Commerce Platform</h3>
-        <p>Modern online store with product management and checkout.</p>
-    </div>
-
-    <!-- CONNECT -->
-    <div class="connect" style="margin-top:60px;">
-        <h2>Let’s Connect</h2>
-
-        <a href="mailto:ajimatibatin@gmail.com">📧</a>
-        <a href="https://x.com/">𝕏</a>
-        <a href="https://github.com/">🐙</a>
-    </div>
 </section>
 
 <!-- FOOTER -->
