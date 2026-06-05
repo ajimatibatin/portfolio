@@ -3,232 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Batin Ajimati | Web Designer</title>
+<title>Batin Portfolio</title>
 
 <style>
-{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-line-height:1.6;
-background:#f4f4f4;
-color:#333;
+* {
+    box-sizing: border-box;
 }
 
-header{
-background:#0f172a;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
 }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
+/* HERO */
+.hero {
+    background: #1f8b4c;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0;
 }
 
-.hero{
-min-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#0f172a,#2563eb);
-color:white;
-padding:20px;
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.hero h1{
-font-size:3rem;
-margin-bottom:15px;
+/* SECTIONS */
+section {
+    width: min(90%, 900px);
+    margin: auto;
+    padding: 60px 0;
 }
 
-.hero p{
-font-size:1.2rem;
-margin-bottom:20px;
+/* ABOUT */
+.about {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:white;
-color:#2563eb;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
-section{
-padding:70px 10%;
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-h2{
-text-align:center;
-margin-bottom:30px;
+/* PROJECT */
+.project {
+    background: white;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+.project:hover {
+    transform: translateY(-5px);
 }
 
-.skill{
-background:white;
-padding:20px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+/* back-to-top icon */
+.top-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* CONNECT */
+.connect {
+    text-align: center;
 }
 
-.project{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.connect a {
+    margin: 0 12px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.contact{
-text-align:center;
+.connect a:hover {
+    transform: scale(1.2);
 }
 
-footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:20px;
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
 }
 
-/ Responsive Layout */
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:15px;
+.circle {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    margin-right: 5px;
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 16px;
+    }
+
+    .top-icon {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 20px;
+    }
 }
 
-.hero h1{
-font-size:2rem;
-}
+@media (max-width: 480px) {
 
-.hero p{
-font-size:1rem;
-}
+    .hero {
+        padding: 60px 15px;
+    }
 
-section{
-padding:50px 5%;
-}
+    section {
+        width: 92%;
+    }
 
+    .about {
+        padding: 20px;
+    }
+
+    .skill {
+        padding: 15px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .connect a {
+        font-size: 22px;
+        margin: 0 8px;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h2>Batin Ajimati</h2>
+<!-- HERO -->
+<div class="hero" id="top">
+    <h1>Hi, I’m Batin</h1>
+    <p>I build websites</p>
+</div>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
+<!-- ABOUT -->
+<section>
+    <div class="about">
+        <h2>About Me</h2>
+        <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
+    </div>
 
-<section class="hero">
-<h1>Hello, I'm Batin Ajimati</h1>
-<p>Web Designer | Front-End Developer | UI/UX Enthusiast</p>
-<a href="#contact" class="btn">Contact Me</a>
+    <h2 style="margin-top:40px;">Development</h2>
+    <div class="skills">
+        <div class="skill">Clean, efficient code</div>
+        <div class="skill">Beautiful interfaces</div>
+        <div class="skill">Fast & responsive</div>
+    </div>
+
+    <h2 style="margin-top:40px;">Projects</h2>
+
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>Mobile App Interface</h3>
+        <p>Mobile-first design with smooth navigation.</p>
+    </div>
+
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio showcasing design and development work.</p>
+    </div>
+
+    <div class="project">
+        <a class="top-icon" href="#top">⬆</a>
+        <h3>E-Commerce Platform</h3>
+        <p>Modern online store with product management and checkout.</p>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="connect" style="margin-top:60px;">
+        <h2>Let’s Connect</h2>
+        <a href="mailto:ajimatibatin@gmail.com">📧</a>
+        <a href="https://x.com/">𝕏</a>
+        <a href="https://github.com/">🐙</a>
+    </div>
 </section>
 
-<section id="about">
-<h2>About Me</h2>
-
-<p style="text-align:center;max-width:800px;margin:auto;">
-I am a passionate Web Designer and Front-End Developer who enjoys creating modern, responsive and user-friendly websites. I have experience using HTML, CSS, JavaScript, Bootstrap and Tailwind CSS to build attractive digital experiences across different devices.
-</p>
-</section>
-
-<section id="skills">
-<h2>Skills</h2>
-
-<div class="skills">
-<div class="skill">HTML5</div>
-<div class="skill">CSS3</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Responsive Design</div>
-<div class="skill">Bootstrap</div>
-<div class="skill">Tailwind CSS</div>
-<div class="skill">Git & GitHub</div>
-<div class="skill">UI/UX Design</div>
-</div>
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>Portfolio Website</h3>
-<p>A fully responsive personal portfolio website built with HTML and CSS.</p>
-</div>
-
-<div class="project">
-<h3>Responsive Landing Page</h3>
-<p>A modern landing page designed to work perfectly on mobile, tablet and desktop devices.</p>
-</div>
-
-<div class="project">
-<h3>Bootstrap Business Website</h3>
-<p>A business website built using Bootstrap's grid system and components.</p>
-</div>
-
-<div class="project">
-<h3>Tailwind CSS Project</h3>
-<p>A responsive web project developed using Tailwind CSS utility classes.</p>
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact Me</h2>
-
-<p>Email: your-email@example.com</p>
-<p>GitHub: github.com/ajimatibatin</p>
-</section>
-
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Batin Ajimati. All Rights Reserved.</p>
+    <p><span class="circle">C</span> 2026 Batin. All rights reserved</p>
 </footer>
 
 </body>
