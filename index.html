@@ -1,266 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batin Ajimati | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batin Ajimati | Web Designer</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<style>
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-        body{
-            line-height:1.6;
-            color:#333;
-            background:#f8f9fa;
-        }
+body{
+line-height:1.6;
+background:#f4f4f4;
+color:#333;
+}
 
-        header{
-            background:#1b4332;
-            color:white;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+header{
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+}
 
-        nav ul{
-            list-style:none;
-            display:flex;
-            gap:20px;
-        }
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            font-weight:bold;
-        }
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-        .hero{
-            min-height:90vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-            background:linear-gradient(to right,#1b4332,#2d6a4f);
-            color:white;
-        }
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#2563eb);
+color:white;
+padding:20px;
+}
 
-        .hero h1{
-            font-size:3rem;
-        }
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+}
 
-        .hero p{
-            font-size:1.2rem;
-            margin:15px 0;
-        }
+.hero p{
+font-size:1.2rem;
+margin-bottom:20px;
+}
 
-        .btn{
-            display:inline-block;
-            background:white;
-            color:#1b4332;
-            padding:12px 25px;
-            text-decoration:none;
-            border-radius:5px;
-            margin:10px;
-            font-weight:bold;
-        }
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:white;
+color:#2563eb;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
 
-        section{
-            padding:80px 10%;
-        }
+section{
+padding:70px 10%;
+}
 
-        h2{
-            text-align:center;
-            margin-bottom:30px;
-            color:#1b4332;
-        }
+h2{
+text-align:center;
+margin-bottom:30px;
+}
 
-        .about p{
-            max-width:800px;
-            margin:auto;
-            text-align:center;
-        }
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
 
-        .skills{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-            gap:20px;
-        }
+.skill{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .skill{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            text-align:center;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-        .projects{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:20px;
-        }
+.project{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .project{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
+.contact{
+text-align:center;
+}
 
-        .contact{
-            text-align:center;
-        }
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:20px;
+}
 
-        footer{
-            background:#1b4332;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+/ Responsive Layout */
+@media(max-width:768px){
 
-        /* RESPONSIVE DESIGN */
-        @media(max-width:768px){
+header{
+flex-direction:column;
+gap:15px;
+}
 
-            header{
-                flex-direction:column;
-                gap:15px;
-                text-align:center;
-            }
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
 
-            nav ul{
-                flex-wrap:wrap;
-                justify-content:center;
-            }
+.hero h1{
+font-size:2rem;
+}
 
-            .hero h1{
-                font-size:2.2rem;
-            }
+.hero p{
+font-size:1rem;
+}
 
-            .hero p{
-                font-size:1rem;
-            }
+section{
+padding:50px 5%;
+}
 
-            section{
-                padding:50px 5%;
-            }
-        }
-    </style>
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h2>Batin Ajimati</h2>
+<h2>Batin Ajimati</h2>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Hello, I'm Batin Ajimati</h1>
-
-    <p>
-        Agricultural Economist | Data Analyst | Researcher
-    </p>
-
-    <p>
-        Passionate about agricultural development, food security research,
-        irrigation studies, and data-driven decision making.
-    </p>
-
-    <div>
-        <a href="#" class="btn">Download CV</a>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
+<h1>Hello, I'm Batin Ajimati</h1>
+<p>Web Designer | Front-End Developer | UI/UX Enthusiast</p>
+<a href="#contact" class="btn">Contact Me</a>
 </section>
 
-<section id="about" class="about">
-    <h2>About Me</h2>
+<section id="about">
+<h2>About Me</h2>
 
-    <p>
-        I am an Agricultural Economist with interests in agricultural
-        development, food security, irrigation economics, and statistical
-        analysis. I enjoy using data to solve real-world agricultural and
-        rural development problems.
-    </p>
+<p style="text-align:center;max-width:800px;margin:auto;">
+I am a passionate Web Designer and Front-End Developer who enjoys creating modern, responsive and user-friendly websites. I have experience using HTML, CSS, JavaScript, Bootstrap and Tailwind CSS to build attractive digital experiences across different devices.
+</p>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
+<h2>Skills</h2>
 
-    <div class="skills">
-        <div class="skill">Stata</div>
-        <div class="skill">Microsoft Excel</div>
-        <div class="skill">Research Writing</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Statistical Modelling</div>
-        <div class="skill">Food Security Analysis</div>
-        <div class="skill">Survey Research</div>
-        <div class="skill">Agricultural Economics</div>
-    </div>
+<div class="skills">
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">Bootstrap</div>
+<div class="skill">Tailwind CSS</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">UI/UX Design</div>
+</div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="projects">
+<div class="projects">
 
-        <div class="project">
-            <h3>Effect of Irrigation Use on Food Security</h3>
-            <p>
-                Research examining the impact of irrigation usage on food
-                security among rice farming households.
-            </p>
-        </div>
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>A fully responsive personal portfolio website built with HTML and CSS.</p>
+</div>
 
-        <div class="project">
-            <h3>Binary Logit Analysis</h3>
-            <p>
-                Identified factors influencing irrigation adoption among
-                farming households.
-            </p>
-        </div>
+<div class="project">
+<h3>Responsive Landing Page</h3>
+<p>A modern landing page designed to work perfectly on mobile, tablet and desktop devices.</p>
+</div>
 
-        <div class="project">
-            <h3>HDDS Analysis</h3>
-            <p>
-                Assessed household dietary diversity and food security.
-            </p>
-        </div>
+<div class="project">
+<h3>Bootstrap Business Website</h3>
+<p>A business website built using Bootstrap's grid system and components.</p>
+</div>
 
-        <div class="project">
-            <h3>Socioeconomic Analysis</h3>
-            <p>
-                Analyzed socioeconomic characteristics of rice farming
-                households.
-            </p>
-        </div>
+<div class="project">
+<h3>Tailwind CSS Project</h3>
+<p>A responsive web project developed using Tailwind CSS utility classes.</p>
+</div>
 
-    </div>
+</div>
 </section>
 
 <section id="contact" class="contact">
-    <h2>Contact Me</h2>
+<h2>Contact Me</h2>
 
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: github.com/ajimatibatin</p>
+<p>Email: your-email@example.com</p>
+<p>GitHub: github.com/ajimatibatin</p>
 </section>
 
 <footer>
-    <p>© 2026 Batin Ajimati. All Rights Reserved.</p>
+<p>© 2026 Batin Ajimati. All Rights Reserved.</p>
 </footer>
 
 </body>
