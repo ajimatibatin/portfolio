@@ -1,240 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Batin Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batin Ajimati | Portfolio</title>
 
-<style>
-html {
-    scroll-behavior: smooth;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #333;
-}
+        body{
+            line-height:1.6;
+            color:#333;
+            background:#f8f9fa;
+        }
 
-/* HERO */
-.hero {
-    background: #1f8b4c;
-    color: white;
-    text-align: center;
-    padding: 90px 20px;
-}
+        header{
+            background:#1b4332;
+            color:white;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
 
-.hero h1 {
-    font-size: 42px;
-    margin: 0;
-}
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
 
-.hero p {
-    font-size: 18px;
-}
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
 
-/* SECTION */
-section {
-    padding: 60px 20px;
-    max-width: 950px;
-    margin: auto;
-}
+        .hero{
+            min-height:90vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+            background:linear-gradient(to right,#1b4332,#2d6a4f);
+            color:white;
+        }
 
-/* CARDS */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 20px;
-}
+        .hero h1{
+            font-size:3rem;
+        }
 
-/* ICON BOX (yellow) */
-.icon-box {
-    display: inline-block;
-    background: #ffd84d;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+        .hero p{
+            font-size:1.2rem;
+            margin:15px 0;
+        }
 
-/* SKILLS GRID */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
+        .btn{
+            display:inline-block;
+            background:white;
+            color:#1b4332;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+            margin:10px;
+            font-weight:bold;
+        }
 
-.skill {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
+        section{
+            padding:80px 10%;
+        }
 
-/* PROJECT SECTION */
-.project-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 60px;
-}
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#1b4332;
+        }
 
-.project-sub {
-    margin-bottom: 30px;
-    color: #666;
-}
+        .about p{
+            max-width:800px;
+            margin:auto;
+            text-align:center;
+        }
 
-/* PROJECT CARD */
-.project {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
+        .skills{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+        }
 
-/* IMAGE ICON */
-.project-img {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+        .skill{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
 
-/* TECH TAGS */
-.tags {
-    margin-top: 10px;
-}
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:20px;
+        }
 
-.tag {
-    display: inline-block;
-    background: #1f8b4c;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-right: 5px;
-}
+        .project{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
 
-/* CONNECT */
-.connect {
-    text-align: center;
-    margin-top: 60px;
-}
+        .contact{
+            text-align:center;
+        }
 
-.connect a {
-    font-size: 22px;
-    margin: 0 10px;
-    text-decoration: none;
-}
+        footer{
+            background:#1b4332;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
 
-/* FOOTER */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-}
+        /* RESPONSIVE DESIGN */
+        @media(max-width:768px){
 
-.circle {
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 3px 8px;
-    margin-right: 5px;
-}
-</style>
+            header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero h1{
+                font-size:2.2rem;
+            }
+
+            .hero p{
+                font-size:1rem;
+            }
+
+            section{
+                padding:50px 5%;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Hi, I’m Batin</h1>
-    <p>I build websites</p>
-</div>
+<header>
+    <h2>Batin Ajimati</h2>
 
-<section>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<!-- ABOUT -->
-<div class="card">
-    <h2>About Me</h2>
-    <p>I’m a web developer focused on building clean, modern, and responsive websites.</p>
-</div>
+<section class="hero">
+    <h1>Hello, I'm Batin Ajimati</h1>
 
-<!-- DEVELOPMENT -->
-<div class="card">
-    <div class="icon-box">&lt; &gt;</div>
-    <h2>Development</h2>
-    <p>Clean, efficient code</p>
-</div>
+    <p>
+        Agricultural Economist | Data Analyst | Researcher
+    </p>
 
-<!-- DESIGN -->
-<div class="card">
-    <div class="icon-box">🎨</div>
-    <h2>Design</h2>
-    <p>Beautiful interfaces</p>
-</div>
+    <p>
+        Passionate about agricultural development, food security research,
+        irrigation studies, and data-driven decision making.
+    </p>
 
-<!-- PERFORMANCE -->
-<div class="card">
-    <div class="icon-box">⚡</div>
-    <h2>Performance</h2>
-    <p>Rapid & immediate</p>
-</div>
-
-<!-- PROJECTS -->
-<div class="project-title">Projects</div>
-<p class="project-sub">Here are some of my amazing works.</p>
-
-<!-- PROJECT 1 -->
-<div class="project">
-    <div class="project-img">📱</div>
-    <h3>Mobile App Interface</h3>
-    <p>Mobile-first design with smooth navigation.</p>
-    <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
+    <div>
+        <a href="#" class="btn">Download CV</a>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
-</div>
-
-<!-- PROJECT 2 -->
-<div class="project">
-    <div class="project-img">💻</div>
-    <h3>Portfolio Website</h3>
-    <p>Personal portfolio showcasing design and development work.</p>
-    <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </div>
-</div>
-
-<!-- PROJECT 3 -->
-<div class="project">
-    <div class="project-img">🛒</div>
-    <h3>E-Commerce Platform</h3>
-    <p>Modern online store with product management and checkout.</p>
-    <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </div>
-</div>
-
-<!-- CONNECT -->
-<div class="connect">
-    <h2>Let’s Connect</h2>
-    <a href="mailto:ajimatibatin@gmail.com">📧</a>
-    <a href="https://x.com/">𝕏</a>
-    <a href="https://github.com/">🐙</a>
-</div>
-
 </section>
 
-<!-- FOOTER -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am an Agricultural Economist with interests in agricultural
+        development, food security, irrigation economics, and statistical
+        analysis. I enjoy using data to solve real-world agricultural and
+        rural development problems.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+        <div class="skill">Stata</div>
+        <div class="skill">Microsoft Excel</div>
+        <div class="skill">Research Writing</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Statistical Modelling</div>
+        <div class="skill">Food Security Analysis</div>
+        <div class="skill">Survey Research</div>
+        <div class="skill">Agricultural Economics</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>Effect of Irrigation Use on Food Security</h3>
+            <p>
+                Research examining the impact of irrigation usage on food
+                security among rice farming households.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Binary Logit Analysis</h3>
+            <p>
+                Identified factors influencing irrigation adoption among
+                farming households.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>HDDS Analysis</h3>
+            <p>
+                Assessed household dietary diversity and food security.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Socioeconomic Analysis</h3>
+            <p>
+                Analyzed socioeconomic characteristics of rice farming
+                households.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: github.com/ajimatibatin</p>
+</section>
+
 <footer>
-    <p><span class="circle">C</span> 2026 Batin. All rights reserved</p>
+    <p>© 2026 Batin Ajimati. All Rights Reserved.</p>
 </footer>
 
 </body>
